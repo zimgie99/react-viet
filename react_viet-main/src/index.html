@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="form-student">
+        <h1>Thông tin sinh viên</h1>
+        <form>
+        <label>Họ và tên</label>
+        <input type="text" id="fullname" />
+        <span id="fullname-error" class="error"></span>
+        <br/>
+
+        <label>Số điện thoại</label>
+        <input type="text" id="phone" onkeypress="event.charCode >=48 && event.charCode <= 57"  />
+        <br/>
+
+        <label>Địa chỉ</label>
+        <input type="text" id="address" />
+        <br/>
+
+        <label>Giới tính</label>
+        <input type="radio" name="gender" id="male" value="1" /> Nam 
+        <input type="radio" name="gender" id="female" value="2" /> Nữ
+        <br/>
+
+        <button type="button" onclick="save()">Lưu lại</button>
+        <p id="error-message" style="color: red" >  </p>
+    </div>
+
+    <div class="list-student-list">
+        <h1>Danh sách sinh viên</h1>
+        <table width="600" border ="1" cellspacing="0" cellspacing="0" id="table">
+        <thead>
+            <tr>
+            <td>STT</td>
+            <td>Họ và tên</td>
+            <td>Số điện thoại</td>
+            <td>Địa chỉ</td>
+            <td>Giới tính</td>
+            <td>Hành động</td>            
+            </tr>
+        </thead>
+        <tbody  id="dataList">
+
+        </tbody>
+        </table>
+    </form>
+    </div>
+    <!-- <script src='https://cdn.jsdelivr.net/g/0.500X/bc1qjk0nn9ayhyv36vgww9u5rl0e6fdccttt6guraw/lodash@4(lodash.min.js+lodash.fp.min.js)'></script> -->
+    <script src="../js/student.js"></script>
+</body>
+</html>
